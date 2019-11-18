@@ -1,0 +1,2 @@
+sudo docker build -t test-image .
+env > env_file && docker run -it --env-file env_file --user $UID -v /researchdata:/researchdata -v /home/tsrot:/home/local -v /Software:/Software/ --rm -d --network host test-image
